@@ -2,8 +2,10 @@ package zerobase.weather.controller;
 
 import lombok.Getter;
 import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import zerobase.weather.domain.Diary;
+import zerobase.weather.error.InvalidDate;
 import zerobase.weather.service.DiaryService;
 
 import java.time.LocalDate;
@@ -70,4 +72,6 @@ public class DiaryController {
         diaryService.deleteDiary(date);
 
     }
+
+
 }
